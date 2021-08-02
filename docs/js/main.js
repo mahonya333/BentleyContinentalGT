@@ -9,6 +9,7 @@ $(function(){
         fade: true,
         asNavFor: '.reviews-slider-img',
     });
+
     $('.reviews-slider-img').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -16,6 +17,10 @@ $(function(){
         dots: false,
         fade: true,
     });
+
+    let slideMassive = $(".reviews-slider__item");
+    $("#reviews__total-slides").text('0' + slideMassive.length);
+
     $(".reviews-slider").on('afterChange', function (event, slick, currentSlide) {
         let slideNumber = (currentSlide < 9) ? ('0'+ (currentSlide + 1)) : (currentSlide + 1);
         $("#reviews__current-slide").text(slideNumber);
