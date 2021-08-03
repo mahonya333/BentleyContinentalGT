@@ -15,7 +15,7 @@
         <div class="site-content">
             <header class="header bg-cover" style="background-image: url('img/header-bg.jpg');">
                 <div class="container">
-                    <div class="header-top">
+                    <div class="header__top">
                         <div class="header-logo logo">
                             <span>drive n dream</span>
                             Аренда элитных авто
@@ -23,19 +23,19 @@
                         <nav class="header-navigation">
                             <ul class="header-navigation__list">
                                 <li class="header-navigation__list-item">
-                                    <a class="header-navigation__list-link" href="#">Галерея</a>
+                                    <a class="header-navigation__list-link" href="#gallery">Галерея</a>
                                 </li>
                                 <li class="header-navigation__list-item">
-                                    <a class="header-navigation__list-link" href="#">Характеристики</a>
+                                    <a class="header-navigation__list-link" href="#characteristics">Характеристики</a>
                                 </li>
                                 <li class="header-navigation__list-item">
-                                    <a class="header-navigation__list-link" href="#">Условия аренды</a>
+                                    <a class="header-navigation__list-link" href="#rent">Условия аренды</a>
                                 </li>
                                 <li class="header-navigation__list-item">
-                                    <a class="header-navigation__list-link" href="#">Отзывы</a>
+                                    <a class="header-navigation__list-link" href="#reviews">Отзывы</a>
                                 </li>
                                 <li class="header-navigation__list-item">
-                                    <a class="header-navigation__list-link" href="#">Контакты</a>
+                                    <a class="header-navigation__list-link" href="#map">Контакты</a>
                                 </li>
                             </ul>
                         </nav>
@@ -145,15 +145,31 @@
                     </div>
                 </div>
             </section>
-            <section class="gallery">
+            <section class="gallery" id="gallery">
                 <div class="container">
                     <h2 class="gallery__title">
                         Чистокровный Bentley
                         <span class="gallery__subtitle">Посмотрите галерею фото Bentley Continental</span>
                     </h2>
+                    <div class="gallery__items">
+                        <div class="gallery-item">
+                            <img class="gallery-item__img" src="img/gallery/gallery1.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img class="gallery-item__img" src="img/gallery/gallery2.jpg" alt="">
+                        </div>
+                        <div class="gallery-item">
+                            <img class="gallery-item__img" src="img/gallery/gallery3.jpg">
+                            <img class="gallery-item__img" src="img/gallery/gallery4.jpg">
+                        </div>
+                        <div class="gallery-item">
+                            <img class="gallery-item__img" src="img/gallery/gallery5.jpg">
+                            <img class="gallery-item__img" src="img/gallery/gallery6.jpg">
+                        </div>
+                    </div>
                 </div>
             </section>
-            <section class="characteristics">
+            <section class="characteristics" id="characteristics">
                 <div class="container">
                     <h2 class="characteristics__title">
                         Технические характеристики
@@ -198,7 +214,7 @@
                     </div>
                 </div>
             </section>
-            <section class="reviews">
+            <section class="reviews" id="reviews">
                 <div class="container">
                     <h2 class="reviews__title">
                         Отзывы наших постоянных клиентов
@@ -256,7 +272,7 @@
                     </div>
                 </div>
             </section>
-            <section class="rent bg-cover" style="background-image: url(img/rent-bg.jpg);">
+            <section class="rent bg-cover" id="rent" style="background-image: url(img/rent-bg.jpg);">
                 <div class="container">
                     <h2 class="rent__title">
                         Арендуйте свой Beantley за 10 мин
@@ -329,7 +345,7 @@
                     </div>
                 </div>
             </section>
-            <section class="map">
+            <section class="map" id="map">
                 <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A458bae27265c38151cf76798786a7d664821101d2f3982f8f7d103542b9462a3&amp;width=100%25&amp;height=691&amp;lang=uk_UA&amp;scroll=false"></script>
             </section>
         </div>
