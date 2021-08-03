@@ -34,11 +34,4 @@ ymaps.ready(function () {
         center: [53.90473, 27.551899],
         zoom: 10
     });
-    
-    function fitMapToViewport () {
-        // Вызываем перерасчет размеров контейнера карты.
-        // Это может происходить автоматически при помощи опции autoFitToViewport
-        // http://api.yandex.ru/maps/doc/jsapi/beta/ref/reference/Map.xml#param-options.autoFitToViewport    
-        map.container.fitToViewport();
-    }
 });

@@ -509,11 +509,23 @@
 /* map end */
 // footer start
 .footer {
-  padding: 10rem 0rem;
+  padding: 10rem 0;
+
+  @include breakpoint($tablet-width) {
+    padding: 5rem 0;
+  }
+
+  @include breakpoint($mobile-width) {
+    padding: 4rem 0;
+  }
 
   &__inner {
     display: flex;
     justify-content: space-between;
+
+    @include breakpoint($mobile-width) {
+      flex-direction: column;
+    }
   }
 
   &__phone-link {
@@ -526,6 +538,10 @@
     color: $color-white-text;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
+
+    @include breakpoint($tablet-width) {
+      font-size: 1.6rem;
+    }
 
     &:hover {
       color: $color-orange;
@@ -552,14 +568,30 @@
 }
 
 .footer-navigation {
+
+  @include breakpoint($mobile-width) {
+    padding: 4rem 0;
+  }
+
   &__list {
     column-count: 2;
     column-gap: 15rem;
+
+    @include breakpoint($tablet-width) {
+      column-count: 1;
+    }
   }
 
   &__list-item {
     display: block;
-    margin-bottom: 4.8rem;
+    
+    & + & {
+      margin-top: 4.8rem;
+
+      @include breakpoint($tablet-width) {
+        margin-top: 1.5rem;
+      }
+    }
   }
 
   &__list-link {
@@ -578,6 +610,10 @@
   max-width: 26rem;
   text-align: center;
 
+  @include breakpoint($mobile-width) {
+    max-width: 100%;
+  } 
+
   &__btn {
     @include button-reset;
     width: 26rem;
@@ -590,6 +626,14 @@
     line-height: 2.2rem;
     color: $color-white-text;
     transition: all 0.3s ease-in-out;
+
+    @include breakpoint($tablet-width) {
+      font-size: 1.6rem;
+    }
+
+    @include breakpoint($mobile-width) {
+      width: 100%;
+    }
 
     &:hover {
       color: $color-orange;
