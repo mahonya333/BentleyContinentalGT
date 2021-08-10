@@ -7,13 +7,102 @@
 /*start header*/
 
 .header {
+  padding-top: 4rem;
   min-height: 72.3rem;
+
+  @include breakpoint($tablet-width) {
+    min-height: auto;
+    padding-bottom: 5rem;
+  }
 
   &__top {
     display: flex;
     justify-content: space-between;
-    padding-top: 4rem;
     min-height: 4.4rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5.5rem;
+
+    @include breakpoint($mobile-width) {
+      align-items: center;
+    }
+  }
+
+  &__content-title {
+    max-width: 64.5rem;
+    margin: 0;
+    font-family: $Montserrat-Bold;
+    font-size: 7rem;
+    line-height: 92.34%;
+    letter-spacing: 0.035em;
+    text-transform: capitalize;
+
+    @include breakpoint($tablet-width) {
+      font-size: 3rem;
+    }
+
+    @include breakpoint($mobile-width) {
+      max-width: 100%;
+      margin-bottom: 22rem;
+    }
+  }
+
+  &__content-suptitle {
+    display: block;
+    font-size: 4rem;
+    line-height: 4.9rem;
+    text-transform: capitalize;
+
+    @include breakpoint($tablet-width) {
+      font-size: 2.6rem;
+    }
+
+    @include breakpoint($mobile-width) {
+      order: 2;
+    }
+  }
+
+  &__price {
+    margin: 1.8rem 0 6rem 0;
+    font-size: 2.8rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.005em;
+
+    @include breakpoint($tablet-width) {
+      margin-top: 0;
+      margin-bottom: 4rem;
+      font-size: 1.8rem;
+    }
+
+    @include breakpoint($mobile-width) {
+      order: 3;
+    }
+  }
+
+  &__reservation-btn {
+    @include button-reset;
+    max-width: 30rem;
+    width: 100%;
+    min-height: 6rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 0.3rem;
+    font-family: $Montserrat-SemiBold;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: $color-white-text;
+    background-color: $color-orange;
+
+    @include breakpoint($tablet-width) {
+      font-size: 1.6rem;
+    }
+
+    @include breakpoint($mobile-width) {
+      max-width: 100%;
+      order: 4;
+    }
   }
 }
 
@@ -22,6 +111,10 @@
   width: 100%;
   padding-left: 2rem;
   padding-right: 2rem;
+
+  @include breakpoint($tablet-width) {
+    display: none;
+  }
 
   &__list {
     display: flex;
@@ -51,6 +144,10 @@
   max-width: 14rem;
   flex-shrink: 0;
 
+  @include breakpoint($mobile-width) {
+    display: none;
+  }
+
   &__link {
     text-decoration: none;
     color: $color-white-text;
@@ -62,55 +159,13 @@
   }
 }
 
-.header-content {
-  padding-top: 5.5rem;
-
-  &__title {
-    max-width: 64.5rem;
-    margin: 0;
-    font-family: $Montserrat-Bold;
-    font-size: 7rem;
-    line-height: 92.34%;
-    letter-spacing: 0.035em;
-    text-transform: capitalize;
-  }
-
-  &__suptitle {
-    display: block;
-    font-size: 4rem;
-    line-height: 4.9rem;
-    text-transform: capitalize;
-  }
-}
-
-.header-price {
-  margin: 1.8rem 0 0 0;
-  font-size: 2.8rem;
-  line-height: 3.4rem;
-  letter-spacing: 0.005em;
-}
-
-.header-reservation {
-  margin-top: 6rem;
-
-  &__btn {
-    @include button-reset;
-    max-width: 30rem;
-    width: 100%;
-    min-height: 6rem;
-    padding: 0.7rem 1.5rem;
-    border-radius: 0.3rem;
-    font-family: $Montserrat-SemiBold;
-    font-size: 2rem;
-    line-height: 2.4rem;
-    color: $color-white-text;
-    background-color: $color-orange;
-  }
-}
-
 .header-additionally {
   display: flex;
   margin-top: 9.6rem;
+
+  @include breakpoint($mobile-width) {
+    display: none;
+  }
 
   &__item {
     display: flex;
@@ -135,15 +190,47 @@
   padding-top: 8.8rem;
   padding-bottom: 12.5rem;
 
+  @include breakpoint($tablet-width) {
+    padding-top: 8rem;
+    padding-bottom: 6.5rem;
+  }
+
+  @include breakpoint($mobile-width) {
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+  }
+
   &__inner {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+
+    @include breakpoint($mobile-width) {
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    width: 50%;
+
+    @include breakpoint($mobile-width) {
+      width: 100%;
+      order: 2;
+    }
   }
 
   &__content {
     max-width: 35rem;
-    width: 100%;
-    margin-left: 13rem;
+    margin-left: 2rem;
+
+    @include breakpoint($tablet-width) {
+      max-width: 50%;
+    }
+
+    @include breakpoint($mobile-width) {
+      max-width: 100%;
+      margin-left: 0;
+    }
   }
 
   &__content-title {
@@ -165,6 +252,11 @@
   padding-top: 8rem;
   padding-bottom: 6rem;
 
+  @include breakpoint($mobile-width) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
   &__title {
     margin: 0 0 5rem 0;
     font-family: $Montserrat-Bold;
@@ -172,6 +264,10 @@
     line-height: 3.7rem;
     text-align: center;
     letter-spacing: 0.095em;
+
+    @include breakpoint($tablet-width) {
+      font-size: 2.6rem;
+    }
   }
 
   &__subtitle {
@@ -184,7 +280,11 @@
 
   &__items {
     display: grid;
-    grid-template-columns: 2fr 2fr 1fr 1fr; 
+    grid-template-columns: 2fr 2fr 1fr 1fr;
+
+    @include breakpoint($mobile-width) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }
 
@@ -204,7 +304,7 @@
   padding: 10rem 0;
 
   @include breakpoint($tablet-width) {
-    padding: 7rem 0;
+    padding: 5rem 0;
   }
 
   &__title {
@@ -214,6 +314,10 @@
     line-height: 3.7rem;
     text-align: center;
     letter-spacing: 0.095em;
+
+    @include breakpoint($tablet-width) {
+      font-size: 2.6rem;
+    }
   }
 
   &__subtitle {
@@ -240,7 +344,6 @@
 }
 
 .characteristics-table {
-
   &__column {
     letter-spacing: 0.015em;
     line-height: 2.4rem;
@@ -253,6 +356,10 @@
   padding-top: 3.6rem;
   padding-bottom: 25.1rem;
 
+  @include breakpoint($tablet-width) {
+    padding-bottom: 10rem;
+  }
+
   &__title {
     margin: 0 0 5rem 0;
     font-family: $Montserrat-Bold;
@@ -260,6 +367,10 @@
     line-height: 3.7rem;
     text-align: center;
     letter-spacing: 0.095em;
+
+    @include breakpoint($tablet-width) {
+      font-size: 2.6rem;
+    }
   }
 
   &__subtitle {
@@ -288,18 +399,42 @@
 .reviews-inner {
   display: flex;
   justify-content: space-between;
+
+  @include breakpoint($mobile-width) {
+    flex-direction: column;
+  }
 }
 
 .reviews-slider-img {
-  max-width: 65rem;
+  max-width: 50%;
   width: 100%;
+
+  @include breakpoint($mobile-width) {
+    max-width: 100%;
+  }
+
+  &__item {
+    min-height: 36.4rem;
+    object-fit: cover;
+
+    @include breakpoint($mobile-width) {
+      min-height: auto;
+    }
+  }
 }
 
 .reviews-slider {
   max-width: 34.2rem;
-  width: 100%;
   height: 100%;
   margin-left: 2rem;
+
+  @include breakpoint($tablet-width) {
+    padding-bottom: 5rem;
+  }
+
+  @include breakpoint($mobile-width) {
+    max-width: 100%;
+  }
 
   .slick-arrow {
     @include button-reset;
@@ -315,29 +450,28 @@
     }
   }
 
-  .slick-prev {
+  .slick-prev,
+  .slick-next {
     bottom: 0;
   }
 
   .slick-next {
-    bottom: 2.5rem;
+    left: 5rem;
   }
 
   &-wrapper {
     position: relative;
   }
 
-  &__info {
-    &-name {
-      font-family: $Montserrat-Bold;
-      font-size: 1.8rem;
-      line-height: 130.9%;
-      letter-spacing: 0.005em;
-    }
+  &__info-text {
+    line-height: 2.1rem;
+  }
 
-    &-text {
-      line-height: 2.1rem;
-    }
+  &__info-name {
+    font-family: $Montserrat-Bold;
+    font-size: 1.8rem;
+    line-height: 130.9%;
+    letter-spacing: 0.005em;
   }
 }
 /*reviews end */
@@ -354,6 +488,10 @@
     line-height: 3.7rem;
     text-align: center;
     letter-spacing: 0.095em;
+
+    @include breakpoint($tablet-width) {
+      font-size: 2.6rem;
+    }
   }
 
   &__subtitle {
@@ -368,6 +506,10 @@
 .rent-items {
   display: flex;
   justify-content: space-around;
+
+  @include breakpoint($mobile-width) {
+    flex-direction: column;
+  }
 }
 
 .rent-item {
@@ -377,12 +519,32 @@
   width: 100%;
   text-align: center;
 
+  @include breakpoint($mobile-width) {
+    flex-direction: row;
+    align-items: center;
+    max-width: 100%;
+    text-align: left;
+  }
+
+  &__img-wrapper {
+    flex-shrink: 0;
+
+    @include breakpoint($mobile-width) {
+      max-width: 10rem;
+    }
+  }
+
   &__img {
     border-radius: 0.4rem;
   }
 
   &__content {
     margin-top: 1.7rem;
+
+    @include breakpoint($mobile-width) {
+      margin-top: 0;
+      margin-left: 5%;
+    }
   }
 
   &__title {
@@ -391,6 +553,10 @@
     font-size: 1.8rem;
     line-height: 2.2rem;
     letter-spacing: 0.015em;
+
+    @include breakpoint($tablet-width) {
+      font-size: 1.6rem;
+    }
   }
 
   &__text {
@@ -404,6 +570,10 @@
 .reservation {
   padding: 15rem 0;
 
+  @include breakpoint($tablet-width) {
+    padding: 7.5rem 0;
+  }
+
   &__inner {
     display: flex;
     align-items: center;
@@ -416,6 +586,10 @@
     font-size: 3rem;
     line-height: 3.7rem;
     letter-spacing: 0.095em;
+
+    @include breakpoint($tablet-width) {
+      font-size: 2.6rem;
+    }
   }
 
   &__subtitle {
@@ -435,12 +609,21 @@
       rgba(114, 110, 110, 0.79) 0%,
       rgba(51, 51, 51, 0) 100%
     );
+
+    @include breakpoint($mobile-width) {
+      display: none;
+    }
   }
 
   &__content {
     max-width: 31rem;
     width: 100%;
     margin-left: 5rem;
+
+    @include breakpoint($mobile-width) {
+      max-width: 100%;
+      margin-left: 0;
+    }
   }
 }
 
@@ -501,7 +684,7 @@
 }
 /*reservation end */
 /* map start */
-.map  {
+.map {
   height: 69.1rem;
 
   @include breakpoint($tablet-width) {
@@ -574,7 +757,6 @@
 }
 
 .footer-navigation {
-
   @include breakpoint($mobile-width) {
     padding: 4rem 0;
   }
@@ -590,7 +772,7 @@
 
   &__list-item {
     display: block;
-    
+
     & + & {
       margin-top: 4.8rem;
 
@@ -618,7 +800,7 @@
 
   @include breakpoint($mobile-width) {
     max-width: 100%;
-  } 
+  }
 
   &__btn {
     @include button-reset;
